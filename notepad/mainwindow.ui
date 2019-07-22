@@ -17,10 +17,10 @@
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>10</y>
-      <width>301</width>
-      <height>211</height>
+      <x>10</x>
+      <y>0</y>
+      <width>381</width>
+      <height>221</height>
      </rect>
     </property>
    </widget>
@@ -34,7 +34,7 @@
      <height>23</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuwen">
+   <widget class="QMenu" name="menuFile">
     <property name="title">
      <string>文件(&amp;F)</string>
     </property>
@@ -45,12 +45,36 @@
     <addaction name="separator"/>
     <addaction name="actionclose_C"/>
    </widget>
-   <widget class="QMenu" name="menu">
+   <widget class="QMenu" name="menuEdit">
     <property name="title">
      <string>编辑</string>
     </property>
+    <addaction name="actioncopy_C"/>
+    <addaction name="actioncut_X"/>
+    <addaction name="actionpaste_P"/>
+    <addaction name="actionAll_A"/>
+    <addaction name="separator"/>
+    <addaction name="actionColor"/>
+    <addaction name="actionFont"/>
+    <addaction name="separator"/>
    </widget>
-   <addaction name="menuwen"/>
+   <widget class="QMenu" name="menuCheck">
+    <property name="title">
+     <string>查看</string>
+    </property>
+    <addaction name="actionTime"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionhelp"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuCheck"/>
    <addaction name="menu"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
@@ -60,14 +84,25 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionopen_O"/>
+   <addaction name="separator"/>
+   <addaction name="actionsave_S"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionopen_O">
+   <property name="icon">
+    <iconset resource="resoucefile.qrc">
+     <normaloff>:/new/Icon/img/open.JPG</normaloff>:/new/Icon/img/open.JPG</iconset>
+   </property>
    <property name="text">
     <string>open(&amp;O)</string>
    </property>
   </action>
   <action name="actionsave_S">
+   <property name="icon">
+    <iconset resource="resoucefile.qrc">
+     <normaloff>:/new/Icon/img/save.JPG</normaloff>:/new/Icon/img/save.JPG</iconset>
+   </property>
    <property name="text">
     <string>save(&amp;S)</string>
    </property>
@@ -87,8 +122,55 @@
     <string>close(&amp;C)</string>
    </property>
   </action>
+  <action name="actionColor">
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </action>
+  <action name="actionFont">
+   <property name="text">
+    <string>Font</string>
+   </property>
+  </action>
+  <action name="actionTime">
+   <property name="text">
+    <string>Time</string>
+   </property>
+  </action>
+  <action name="actioncopy_C">
+   <property name="text">
+    <string>copy(&amp;C)</string>
+   </property>
+  </action>
+  <action name="actioncut_X">
+   <property name="text">
+    <string>cut(&amp;X)</string>
+   </property>
+  </action>
+  <action name="actionpaste_P">
+   <property name="text">
+    <string>paste(&amp;P)</string>
+   </property>
+  </action>
+  <action name="actionAll_A">
+   <property name="text">
+    <string>All(&amp;A)</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionhelp">
+   <property name="text">
+    <string>help</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resoucefile.qrc"/>
+ </resources>
  <connections/>
 </ui>
